@@ -73,6 +73,6 @@ Compare to Homework 7's Viz2, which only counted buildings by County, the new vi
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/meganhsu/meganhsuu.github.io/python_notebooks/IS445_DataViz_HW8.ipynb" text="The Analysis" %}]
+{% include elements/button.html link="https://github.com/meganhsuu/meganhsuu.github.io/blob/main/python_notebooks/IS445_DataViz_HW8.ipynb" text="The Analysis" %}
 </div>
 
