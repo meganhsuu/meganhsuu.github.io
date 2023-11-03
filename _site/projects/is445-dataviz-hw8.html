@@ -85,19 +85,27 @@
 <p>Design Choices:</p>
 <ol>
   <li>
-    <p>Encoding Types:
-The X-axis encodes “Year Acquired” as a time variable to show the distribution of acquisition years.
-The Y-axis encodes “Square Footage” as a quantitative variable to represent the size of the buildings.
-The color of the data points is encoded by “Building Status” using a nominal scale to distinguish different building statuses.
-Tooltip information includes “Building Status,” “Year Acquired,” and “Square Footage” to provide details on each data point when hovering.</p>
+    <p>Encoding Types:</p>
+
+    <p>The X-axis encodes “Year Acquired” as a time variable to show the distribution of acquisition years.</p>
+
+    <p>The Y-axis encodes “Square Footage” as a quantitative variable to represent the size of the buildings.</p>
+
+    <p>The color of the data points is encoded by “Building Status” using a nominal scale to distinguish different building statuses.</p>
+
+    <p>Tooltip information includes “Building Status,” “Year Acquired,” and “Square Footage” to provide details on each data point when hovering.</p>
   </li>
   <li>
     <p>Color Scheme:
 The color scheme is based on a nominal scale, where each unique building status is assigned a different color. This choice helps distinguish different building statuses effectively.</p>
   </li>
   <li>
+    <p>Data Transformation:
+The transform_filter method is used to filter the data based on the selected building status, which allows users to interactively explore data for a specific building status.</p>
+  </li>
+  <li>
     <p>Interactivity:
-The chart includes a dropdown selection for “Building Status,” allowing users to interactively filter and view buildings based on their status. This interactive feature enhances the ability to focus on specific building statuses and compare their characteristics.</p>
+The dropdown menu is provided to select a specific building status. When a status is selected from the dropdown, the plot updates to display only the data points corresponding to that status.</p>
   </li>
 </ol>
 
@@ -110,14 +118,27 @@ The chart includes a dropdown selection for “Building Status,” allowing user
 <p>Design Choices:</p>
 <ol>
   <li>
-    <p>Encoding Types:
-The x-axis encodes the count of buildings, providing a visual representation of the number of buildings for each agency. The y-axis encodes the ‘Agency Name,’ categorizing the bars by the agency. The color of the bars is determined by the ‘Building Status’ variable. This helps distinguish the building status categories within each agency. The tooltip is used to display the count of buildings (‘Counts of Building’) and the ‘Building Status’ when hovering over a bar. The ‘count()’ function is applied to count the number of buildings for each agency and ‘Building Status’ category. This provides additional information on the distribution of building statuses within each agency.</p>
+    <p>Encoding Types:</p>
+
+    <p>The x-axis encodes the count of buildings, providing a visual representation of the number of buildings for each agency.</p>
+
+    <p>The y-axis encodes the ‘Agency Name,’ categorizing the bars by the agency.</p>
+
+    <p>The color of the bars is determined by the ‘Building Status’ variable. This helps distinguish the building status categories within each agency.</p>
+
+    <p>The tooltip is used to display the count of buildings (‘Counts of Building’) and the ‘Building Status’ when hovering over a bar, which provides additional information on the distribution of building statuses within each agency.</p>
   </li>
   <li>
     <p>Color Scheme:
 The color scheme is applied to the ‘Building Status’ variable. Different building statuses are represented by distinct colors, which makes it easier to differentiate between them in the chart.</p>
   </li>
+  <li>
+    <p>Data Transformation:
+The chart directly counts the number of buildings with the differentiate of ‘Building Status’ category for each agency. No significant data transformations are in the code.</p>
+  </li>
 </ol>
+
+<p>Compare to Homework 7’s Viz2, which only counted buildings by County, the new visualization focuses on counting buildings by agency and improves the chart by using different colors for building statuses, making them easier to distinguish. Tooltips are also added to show the count of buildings for each status within an agency, providing a clearer and more detailed representation of the data, and helping users explore building counts by agency and status.</p>
 
 <!-- these are written in a combo of html and liquid -->
 
