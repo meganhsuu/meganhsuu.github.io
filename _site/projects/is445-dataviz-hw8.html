@@ -22,11 +22,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="HW8">
+  <meta property="og:title" content="IS445_DataViz_HW8">
   <meta property="og:description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
   <meta property="og:image" content="assets/pngs/cars.png">
 
-  <title>HW8</title>
+  <title>IS445_DataViz_HW8</title>
   <meta name="description" content="This is a "showcase" project that uses vega-lite for interactive viz!">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -74,11 +74,50 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="example-including-vega-lite">Example including vega-lite</h1>
+  <h2 id="data-visualization-of-building-inventory-data"><strong>Data Visualization of Building Inventory Data</strong></h2>
 
-<vegachart schema-url="/assets/json/cars.json" style="width: 100%"></vegachart>
+<h4 id="viz1---scatter-plot-by-building-status-and-year-acquired">Viz1 - Scatter Plot by Building Status and Year Acquired</h4>
 
-<p>In theory, you can also use <a href="https://jekyllrb.com/docs/plugins/hooks/">Jekyll hooks</a> to do it, but I haven’t figured out a way that looks nice yet.</p>
+<vegachart schema-url="/assets/json/HW8_chart1.json" style="width: 100%"></vegachart>
+
+<p>This scatter plot visualizes the relationship between “Year Acquired” and “Square Footage” for different buildings in the dataset. Each data point represents a building and is color-coded based on its “Building Status.” The scatter plot allows users to explore how the year of acquisition and square footage vary across different building statuses.</p>
+
+<p>Design Choices:</p>
+<ol>
+  <li>
+    <p>Encoding Types:
+The X-axis encodes “Year Acquired” as a time variable to show the distribution of acquisition years.
+The Y-axis encodes “Square Footage” as a quantitative variable to represent the size of the buildings.
+The color of the data points is encoded by “Building Status” using a nominal scale to distinguish different building statuses.
+Tooltip information includes “Building Status,” “Year Acquired,” and “Square Footage” to provide details on each data point when hovering.</p>
+  </li>
+  <li>
+    <p>Color Scheme:
+The color scheme is based on a nominal scale, where each unique building status is assigned a different color. This choice helps distinguish different building statuses effectively.</p>
+  </li>
+  <li>
+    <p>Interactivity:
+The chart includes a dropdown selection for “Building Status,” allowing users to interactively filter and view buildings based on their status. This interactive feature enhances the ability to focus on specific building statuses and compare their characteristics.</p>
+  </li>
+</ol>
+
+<h4 id="viz2---bar-chart-of-building-counts-by-agency-name-and-building-status">Viz2 - Bar Chart of Building Counts by Agency Name and Building Status</h4>
+
+<vegachart schema-url="/assets/json/HW8_chart2.json" style="width: 100%"></vegachart>
+
+<p>This bar chart visualizes the counts of buildings for different agencies, with each bar representing a specific agency. The bars are colored based on the ‘Building Status’ category, and a tooltip is included to display the count of buildings for each ‘Building Status’ within an agency when you hover over a bar.</p>
+
+<p>Design Choices:</p>
+<ol>
+  <li>
+    <p>Encoding Types:
+The x-axis encodes the count of buildings, providing a visual representation of the number of buildings for each agency. The y-axis encodes the ‘Agency Name,’ categorizing the bars by the agency. The color of the bars is determined by the ‘Building Status’ variable. This helps distinguish the building status categories within each agency. The tooltip is used to display the count of buildings (‘Counts of Building’) and the ‘Building Status’ when hovering over a bar. The ‘count()’ function is applied to count the number of buildings for each agency and ‘Building Status’ category. This provides additional information on the distribution of building statuses within each agency.</p>
+  </li>
+  <li>
+    <p>Color Scheme:
+The color scheme is applied to the ‘Building Status’ variable. Different building statuses are represented by distinct colors, which makes it easier to differentiate between them in the chart.</p>
+  </li>
+</ol>
 
 <!-- these are written in a combo of html and liquid -->
 
