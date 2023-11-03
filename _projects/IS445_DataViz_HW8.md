@@ -37,7 +37,7 @@ The color scheme is based on a nominal scale, where each unique building status 
 The transform_filter method is used to filter the data based on the selected building status, which allows users to interactively explore data for a specific building status.
 
 4. Interactivity:
-The dropdown menu is provided to select a specific building status. When a status is selected from the dropdown, the plot updates to display only the data points corresponding to that status.
+The dropdown menu is provided to select a specific building status. When a status is selected from the dropdown, the plot display only the data points corresponding to that status.
 
 
 #### Viz2 - Bar Chart of Building Counts by Agency Name and Building Status
