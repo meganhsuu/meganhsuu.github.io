@@ -20,7 +20,7 @@ In the dynamic landscape of U.S. healthcare, the availability and analysis of co
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/FP_main_chart.json" style="width: 20%"></vegachart>
 
-This interactive bar chart provides a comprehensive overview of mean hospital overall ratings, taking into account hospital ownership and type. Users can utilize the dropdown menu to select specific states, enabling a localized analysis. The x-axis represents mean hospital overall ratings, and the y-axis categorizes hospitals based on ownership. Color-coded bars distinguish between hospital types and the tooltip feature enhances user experience, offering detailed information on the state, hospital type, ownership, and mean hospital overall rating.
+This interactive bar chart provides a comprehensive overview of mean hospital overall ratings, taking into account hospital ownership and hospital type. Users can utilize the dropdown menu to select specific states, enabling a localized analysis. The x-axis represents mean hospital overall ratings, and the y-axis categorizes hospitals based on ownership. Color-coded bars distinguish between hospital types and the tooltip feature enhances user experience, offering detailed information on the state, hospital type, ownership, and mean hospital overall rating.
 
 ##### Potential analyses and insights
 1. Regional Variations in Healthcare Quality: Users can utilize the dropdown menu to select specific states of interest. By examining the mean hospital overall ratings across various states, one can identify regional variations in healthcare quality, which can be crucial for policymakers, healthcare administrators, and the public in making informed decisions about healthcare facilities.
